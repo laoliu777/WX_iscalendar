@@ -45,11 +45,11 @@ public class DBUtil {
 	}
 	public static Connection CreateConn() {
 		// TODO Auto-generated method stub
-		 String url="jdbc:mysql://172.19.241.69:3306/test?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai";
+		 String url="jdbc:mysql://0.0.0.0:3306/test?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai";
 		 //String url="jdbc:mysql://localhost:3306/calendar?characterEncoding=UTF-8&setUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai";
 		 String driverClass="com.mysql.cj.jdbc.Driver";
 		 String username="root";
-		 String password="Zhm9610107.";
+		 String password="0000000";
 		 //String password="123456";
 
 		Connection conn = null;
