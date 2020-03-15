@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "iconSelector": "/components/iconSelector/iconSelector"
+  },
+  "navigationBarTitleText": "新的打卡"
+}

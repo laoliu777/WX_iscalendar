@@ -1,0 +1,23 @@
+/* pages/login/login.wxss */
+@import '../../app.wxss';
+
+content {
+  width: 80%;
+  margin: 10%;
+}
+
+view {
+  
+}
+
+.title {
+  font-weight: 600;
+}
+
+.description {
+  color: #999;
+}
+
+button {
+  border-radius: 50px;
+}

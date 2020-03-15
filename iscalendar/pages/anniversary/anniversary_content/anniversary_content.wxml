@@ -1,0 +1,75 @@
+<!--pages/anniversary/anniversary_content/anniversary_content.wxml-->
+<view class="page">
+  <view class="page__bd page__bd_spacing body-wrapper" style="padding-bottom: 0">
+    <view class="overview-item">
+        <view class="item-inner">
+          <view class="item-left">
+            <text class="item-left-name">{{date.year}}</text>
+            <text class="item-left-week">{{date.week}},</text>
+            <text class="item-left-date">{{date.month}} {{date.day}}</text>
+          </view>
+          <view class="item-right">
+            <text class='item-right-name'>事件名</text>
+            <text class='item-right-text'>{{AnniversaryDetails.timeName}}</text>
+            <text class='item-right-name'>纪念日期</text>
+            <text class='item-right-text'>{{AnniversaryDetails.date}}</text>
+            <text class='item-right-name'>已过天数</text>
+            <text class='item-right-text'>{{AnniversaryDetails.passDay}}</text>
+          </view>
+        </view>
+    </view>
+  </view>
+
+    <view class="page__bd_spacing page__bd" style="padding-top: 5px;">
+    <view class="kind-list">
+      <view class="kind-list__item list-contents">
+        <view class="weui-flex kind-list__item-hd">
+          <h3>纪念方式</h3>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>{{AnniversaryDetails.type}}</text>
+          </view>
+        </view>
+        <view class="weui-flex kind-list__item-hd" wx:if="{{AnniversaryDetails.type != '非纪念日'}}">
+          <h3>距离下一个纪念日</h3>
+        </view>
+        <view class="weui-flex kind-list__item-hd" wx:if="{{AnniversaryDetails.type != '非纪念日'}}">
+          <view class="page-text">
+            <text class="NextAnnTime">{{AnniversaryDetails.nextAnniversary}} 天</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd page__bd_spacing" style="padding-top: 0;">
+    <view class="kind-list">
+      <view class="kind-list__item list-contents">
+        <view class="weui-flex kind-list__item-hd">
+          <h3>事件描述</h3>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>{{AnniversaryDetails.description}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd_spacing page__bd" style="padding-top: 0;">
+    <view class="kind-list">
+      <view class="kind-list__item list-contents">
+        <view class="weui-flex kind-list__item-hd">
+          <h3>事件操作</h3>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="operation-icon" bindtap="onClickDelete">
+            <image src="{{icon_url.icon_delete}}"> </image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,80 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.today-wrapper {
+  position: relative;
+  border-radius: 3px 3px 0 0;
+  background-color: #5626e5;
+  padding: 5px 15px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.week {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.month, .year {
+  color: #ffffff80;
+  margin: 4px 0;
+}
+
+.day {
+  font-size: 32px;
+  margin: 0;
+  line-height: 32px;
+}
+
+.calendar-wrapper {
+  padding: 5px 15px;
+}
+
+.new-diary-btn {
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.add-btn {
+position: absolute;
+top: 50px;
+font-size: 36px;
+color: #5626e5;
+right: 50px;
+line-height: 32px;
+width: 36px;
+font-weight: 600;
+
+}
+
+.btn-hover{
+  position: relative;
+  top: 3rpx;
+  box-shadow:0px 0px 8px #999 inset; 
+}

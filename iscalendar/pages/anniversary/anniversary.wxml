@@ -1,0 +1,29 @@
+<view class="page__bd page__bd_spacing body-wrapper" style="background-color: transparent;">
+  <view class="kind-list__item" wx:if="{{anniversaryLists.length == 0}}">
+    <view class="weui-flex kind-list__item-hd notification-class">
+      <h4>还没有添加纪念日...</h4>
+    </view>
+  </view>
+  <!-- 左滑删除功能加入 -->
+  <view class="weui-slidecells">
+  <block wx:for="{{anniversaryLists}}" wx:for-item="item" wx:key="index">
+  <mp-slideview buttons="{{slideButtons}}" icon="{{true}}" bindbuttontap="slideButtonTap" data-id="{{item.id}}">
+    <view class="kind-list__item" wx:if="{{item.status}}" bindlongtap="onLongPressCard">
+      <view class="weui-flex kind-list__item-hd" data-id="{{item.id}}" data-content="{{item.name}}" bindtap='goDetails'>
+        <view class="kind-list-img-checkin" style="background: {{item.background}}">
+          <image class="kind-list__icon" src="../../images/clock/{{item.iconURL}}" />
+        </view>
+        <view class="weui-flex__item" style="padding-left: 20rpx;"><span>{{item.name}}</span>\n{{item.createDate}}</view>
+        <view class="weui-flex__item" style="text-align: right;">
+          <text class='ItemNameText'>已 过\n{{item.passDays}}天</text>
+        </view>
+      </view>
+    </view>
+    </mp-slideview>
+  </block>
+  </view>
+</view>
+
+ <view class="page__ft">		
+   <view class="full-btn" bindtap="addAnniversary">+ 添加一个纪念日</view>		
+ </view>

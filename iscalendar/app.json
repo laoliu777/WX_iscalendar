@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/checkin/checkin",
+    "pages/checkin/checkin_content/checkin_content",
+    "pages/addCheck/addCheck",
+    "pages/addAnniversary/addAnniversary",
+    "pages/anniversary/anniversary",
+    "pages/anniversary/anniversary_content/anniversary_content",
+    "pages/writeDairy/writeDairy",
+    "pages/dateDetail/dateDetail",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小日程",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#5626e5",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "今日",
+        "iconPath": "./images/tabbar/icon_today.png",
+        "selectedIconPath": "./images/tabbar/icon_today_selected.png"
+      },
+      {
+        "pagePath": "pages/checkin/checkin",
+        "text": "打卡",
+        "iconPath": "./images/tabbar/icon_check.png",
+        "selectedIconPath": "./images/tabbar/icon_check_selected.png"
+      },
+      {
+        "pagePath": "pages/anniversary/anniversary",
+        "text": "纪念日",
+        "iconPath": "./images/tabbar/icon_anniversary.png",
+        "selectedIconPath": "./images/tabbar/icon_anniversary_selected.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./images/tabbar/icon_user.png",
+        "selectedIconPath": "./images/tabbar/icon_user_selected.png"
+      }
+    ]
+  }
+}

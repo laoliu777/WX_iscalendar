@@ -1,0 +1,48 @@
+<view class="page__bd page__bd_spacing body-wrapper" style="background-color: transparent;">
+  <view class="kind-list__item" wx:if="{{checkinLists.length == 0}}">
+    <view class="weui-flex kind-list__item-hd notification-class">
+      <h4>还没有添加打卡事项...</h4>
+    </view>
+  </view>
+
+  <!-- <block wx:for="{{checkinLists}}" wx:for-item="item" wx:key="index">
+    <view class="kind-list__item" wx:if="{{item.status}}" bindlongtap="onLongPressCard">
+      <view class="weui-flex kind-list__item-hd" data-id="{{item.id}}" data-content="{{item.name}}" bindtap='goDetails'>
+        <view class="kind-list-img-checkin" style="background: {{item.background}}">
+          <image class="kind-list__icon" src="../../images/clock/{{item.iconURL}}" />
+        </view>
+        <view class="weui-flex__item" style="padding-left: 20rpx;">{{item.name}}</view>
+        <view class="weui-flex__item" style="text-align: right;">
+          <text class='ItemNameText'>已坚持\n{{item.stickDays}}天</text>
+        </view>
+      </view>
+    </view>
+  </block> -->
+
+  <!-- 左滑删除功能加入 -->
+  <view class="weui-slidecells">
+    <!-- 按照数组添加打卡项 -->
+    <block wx:for="{{checkinLists}}" wx:for-item="item" wx:key="index">
+      <mp-slideview buttons="{{slideButtons}}" icon="{{true}}" bindbuttontap="slideButtonTap" data-id="{{item.id}}">
+        <view class="kind-list__item" wx:if="{{item.status}}" bindlongtap="onLongPressCard">
+          <view class="weui-flex kind-list__item-hd" data-id="{{item.id}}" data-content="{{item.name}}" bindtap='goDetails'>
+            <view class="kind-list-img-checkin" style="background: {{item.background}}">
+              <image class="kind-list__icon" src="../../images/clock/{{item.iconURL}}" />
+            </view>
+            <view class="weui-flex__item" style="padding-left: 20rpx;">{{item.name}}</view>
+            <view class="weui-flex__item" style="text-align: right;">
+              <text class='ItemNameText'>已坚持\n{{item.stickDays}}天</text>
+            </view>
+          </view>
+        </view>
+      </mp-slideview>
+    </block>
+
+  </view>
+</view>
+
+<!--添加打卡项-->
+<view class="page__ft">
+  <!-- 添加打卡项内容 -->
+  <view class="full-btn" bindtap="onClickAdd">+ 添加一个打卡事项</view>
+</view>

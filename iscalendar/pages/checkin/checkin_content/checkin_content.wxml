@@ -1,0 +1,89 @@
+<!--pages/checkin/checkin_content/checkin_content.wxml-->
+<view class="page">
+  <view class="page__bd page__bd_spacing body-wrapper">
+    <view class="weui-flex" class="today-wrapper">
+      <view class="title">
+        {{cur}}
+      </view>
+    </view>
+    <view class="weui-flex" class="calendar-wrapper">
+      <view class="weui-flex__item">
+        <calendar calendarConfig="{{calendarConfig}}" bind:onTapDay="onTapDay" bind:afterTapDay="afterTapDay" bind:onSwipe="onSwipe" bind:whenChangeWeek="whenChangeWeek" bind:whenChangeMonth="whenChangeMonth" bind:afterCalendarRender="afterCalendarRender"></calendar>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd_spacing page__bd" style="padding-top: 5px;">
+    <view class="kind-list">
+      <view class="kind-list__item list-contents">
+        <view class="weui-flex kind-list__item-hd">
+          <h3>打卡进度：{{today.month}}</h3>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <progress percent="{{checkinItem.checkinProgess}}" font-size="12px" color="#5626e5" show-info />
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>计划天数：{{checkinItem.plannedDays}}</text>
+          </view>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>打卡天数：{{checkinItem.checkinDays}}</text>
+          </view>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>错过天数：{{checkinItem.missedDays}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd_spacing page__bd" style="padding-top: 0;">
+    <view class="kind-list">
+      <view class="kind-list__item list-contents">
+        <view class="weui-flex kind-list__item-hd">
+          <h3>打卡记录</h3>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>共计打卡天数：{{checkinItem.totalCheckedDays}}</text>
+          </view>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>当前连续天数：{{checkinItem.curConsecutiveDays}}</text>
+          </view>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>最长连续天数：{{checkinItem.maxConsecutiveDays}}</text>
+          </view>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="page-text">
+            <text>建立日期：{{checkinItem.createDay}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd_spacing page__bd" style="padding-top: 0;">
+    <view class="kind-list">
+      <view class="kind-list__item list-contents">
+        <view class="weui-flex kind-list__item-hd">
+          <h3>事件操作</h3>
+        </view>
+        <view class="weui-flex kind-list__item-hd">
+          <view class="operation-icon" bindtap="onClickDelete">
+            <image src="{{icon_url.icon_delete}}"> </image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

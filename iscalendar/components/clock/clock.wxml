@@ -1,0 +1,9 @@
+<!--components/clock/clock.wxml-->
+<view class="clock-wrapper">
+  <view class="icon-wrapper" style="background: {{backgroundColor}}" bindtap="clickClock">
+    <image class="weui-grid__icon" src="../../images/clock/{{clockConfig.iconURL}}" />
+  </view>
+  <view class="weui-grid__name">{{clockConfig.name}}</view>
+  <view class="weui-grid__label" wx:if="{{checked && clockConfig.show}}">已连续打卡{{stick_days}}天</view>
+    <view class="weui-grid__label" wx:if="{{!checked && clockConfig.show}}">今日尚未打卡</view>
+</view>

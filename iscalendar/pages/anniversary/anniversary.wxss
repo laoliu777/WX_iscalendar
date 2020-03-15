@@ -1,0 +1,160 @@
+/* pages/checkin/checkin.wxss */
+@import '../../weui.wxss';
+
+/* 礼品列表 */
+
+.giftListView {
+  width: 90%;
+  bottom: 0;
+  top: 500rpx;
+  position: absolute;
+}
+
+/* 每个cell单独的样式 */
+
+.item {
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+  /* background-color: green; */
+  border-bottom: 20px solid #fafafa;
+  border: 20rpx solid #dadada;
+  border-width: 20rpx 0;
+}
+
+/* cell 产品图 */
+
+.iconImageView {
+  width: 100rpx;
+  height: 100rpx;
+  top: 50rpx;
+  left: 40rpx;
+  border-radius: 25px;
+  /* background-color:orange; */
+  position: absolute;
+}
+
+.iconImage {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* 打卡内容名 */
+
+.ItemNameView {
+  top: 65rpx;
+  left: 160rpx;
+  right: 130rpx;
+  height: 50rpx;
+  position: absolute;
+}
+
+/* 打卡内容文本样式 */
+
+.ItemNameText {
+  color: rgb(32, 27, 27);
+  font-size: 35rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 需要积分数 */
+
+.needScoreView {
+  top: 50rpx;
+  right: 10rpx;
+  height: 50rpx;
+  width: 100rpx;
+  position: absolute;
+}
+
+.needSocreText {
+  color: rgb(0, 0, 0);
+  font-size: 35rpx;
+  z-index: 2;
+}
+
+/* 具体产品 */
+
+.productDesView {
+  top: 120rpx;
+  height: 50rpx;
+  left: 280rpx;
+  right: 20rpx;
+  /* background-color: gray; */
+  position: absolute;
+}
+
+.productDesText {
+  font-size: 32rpx;
+  color: gray;
+  display: block;
+  /* line-height: 50rpx; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* -webkit-line-clamp:1;  */
+}
+
+.kind-list-img-checkin {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  display: inline-block;
+  border: 2px solid #666;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.kind-list__icon {
+  position: absolute;
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toastbg {
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.weui-flex__item span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*用于滑动视图*/
+
+page {
+  background-color: #f7f7f7;
+}
+
+.weui-slidecell {
+  margin: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  line-height: 1.4;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 3px 5px 1px #cecdcc99;
+}
+
+.weui-cell {
+  padding: 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  box-shadow: 0px 3px 5px 1px #cecdcc99;
+}

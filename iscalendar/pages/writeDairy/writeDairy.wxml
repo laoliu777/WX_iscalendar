@@ -1,0 +1,46 @@
+<view class="page">
+  <!-- 日记内容 -->
+  <view class="page__bd page__bd_spacing">
+    <!-- <view style="margin: 5px 5px 5px 10px;"> -->
+    <h2>日记内容</h2>
+    <!-- </view> -->
+    <view class="dairy-content content-wrapper">
+      <editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady" bindinput="onContentChange">
+      </editor>
+      
+    </view>
+  </view>
+  <!-- 图片上传 -->
+  <view class="page__bd page__bd_spacing">
+    <h2>图片上传</h2>
+    <view class="content-wrapper">
+      <view class="weui-uploader">
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files" id="uploaderFiles">
+            <block wx:for="{{files}}" wx:key="*this">
+              <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd_spacing" style="float: right; ">
+    <!-- <h2>图片上传</h2> -->
+    <!-- <view class="content-wrapper"> -->
+      <!-- <view class="dairy-button"> -->
+      <button class="weui-btn" type="primary" size="mini" bindtap="returnLastPage" style="margin-right: 10px;">取消</button>
+      <button class="weui-btn" type="primary" size="mini" bindtap="clickSaveText">确认</button>
+    <!-- </view> -->
+  </view>
+  <!-- <view class="rich-content">
+    <rich-text nodes="{{nodes}}"></rich-text>
+    <text>{{content_html}}</text>
+  </view> -->
+</view>

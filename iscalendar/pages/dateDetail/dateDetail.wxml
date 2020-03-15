@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view class="page">
+  <!-- shang -->
+  <view class="page__bd page__bd_spacing body-wrapper" style="padding-bottom: 0">
+    <view class="overview-item">
+      <view class="item-inner">
+        <view class="item-left">
+          <text class="item-left-name">{{date.year}}</text>
+          <text class="item-left-week">{{date.week}},</text>
+          <text class="item-left-date">{{date.month}} {{date.day}}</text>
+        </view>
+        <view class="item-right">
+          <text class='item-right-name'>当日日期</text>
+          <text class='item-right-text'>{{year}}-{{month}}-{{day}}</text>
+          <text class='item-right-name'>当日纪念数</text>
+          <text class='item-right-text'>{{anniversaryCount}}</text>
+          <text class='item-right-name'>当日打卡数</text>
+          <text class='item-right-text'>{{checkinCount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd page__bd_spacing">
+    <h3>当日打卡</h3>
+    <view class="text-diary">
+      <view class="notification-class" wx:if="{{checkinList.length == 0}}">
+        <h4>当日没有打卡记录...</h4>
+      </view>
+      <view class="weui-grids" wx:else>
+        <block wx:for="{{checkinList}}" wx:key="id">
+          <view class="clock-wrapper weui-grid">
+            <view class="icon-wrapper" style="background: {{item.background}}">
+              <image class="weui-grid__icon" src="../../images/clock/{{item.iconURL}}" />
+            </view>
+            <view class="weui-grid__name">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd page__bd_spacing">
+    <h3>当日纪念</h3>
+    <view class="text-diary">
+      <view class="notification-class" wx:if="{{anniversaryList.length == 0}}">
+        <h4>当日没有纪念事件...</h4>
+      </view>
+      <view class="weui-grids" wx:else>
+        <block wx:for="{{anniversaryList}}" wx:key="id">
+          <view class="clock-wrapper weui-grid">
+            <view class="icon-wrapper" style="background: {{item.background}}">
+              <image class="weui-grid__icon" src="../../images/clock/{{item.iconURL}}" />
+            </view>
+            <view class="weui-grid__name">{{item.name}}</view>
+            <view class="weui-grid__label">{{item.description}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <view class="page__bd page__bd_spacing">
+    <h3>当日日记</h3>
+    <view class="text-diary">
+      <!-- <h6 wx:if="{{content.length == 0 && files.length == 0}}">当日未编写日记...</h6> -->
+      <view class="notification-class" wx:if="{{content==''}}">
+        <h4>当日未编写日记...</h4>
+      </view>
+      <view class="weui-flex">
+        <rich-text nodes="{{nodes}}"></rich-text>
+      </view>
+    </view>
+  </view>
+
+</view>

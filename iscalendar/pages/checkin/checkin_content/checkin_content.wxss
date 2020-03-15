@@ -1,0 +1,99 @@
+/* pages/checkin/checkin_content/checkin_content.wxss */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.body-wrapper {
+  background-color: #fff;
+  margin: 15px;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.today-wrapper {
+  border-radius: 3px 3px 0 0;
+  background-color: #5626e5;
+  padding: 5px 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  font-size: 32px;
+  margin: 20px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.calendar-wrapper {
+  padding: 5px 15px;
+}
+
+.weui-grids {
+  border: none;
+}
+
+.weui-grid {
+  border: none;
+  text-align: center;
+  padding: 5px;
+}
+
+progress {
+  width: 100%;
+}
+
+.progress-box {
+  display: flex;
+  height: 50rpx;
+  margin-bottom: 60rpx;
+}
+
+.progress-cancel {
+  margin-left: 40rpx;
+}
+
+.page__bd {
+  padding-bottom: 10px;
+}
+
+.page-text {
+  padding-top: 3px;
+  font-size: 12px;
+  padding-bottom: 3px;
+}
+
+.operation-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #5626e5;
+  border-radius: 50%;
+  position: relative;
+}
+
+.operation-icon image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+}

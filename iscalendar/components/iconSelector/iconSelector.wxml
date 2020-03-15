@@ -1,0 +1,42 @@
+<!--components/iconSelector/iconSelector.wxml-->
+<view class="page__bd page__bd_spacing body-wrapper">
+  <view class="kind-list">
+    <view class="kind-list__item">
+      <view class="weui-flex kind-list__item-hd" style="padding-bottom: 0px;">
+        <view>
+          <h4>选择一个图标和颜色：</h4>
+        </view>
+        <view class="weui-flex__item" style="text-align: right;">
+          <view class="clock-wrapper">
+            <view class="icon-wrapper" style="background: {{backgroundColor}}">
+              <image class="weui-grid__icon" src="../../images/clock/{{imageUrl}}" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <scroll-view scroll-x="true" enable-flex="true">
+        <view class="weui-grids kind-list__item-hd">
+          <block wx:for="{{icons}}" wx:key="*this">
+            <view class="weui-grid" wx:if="{{displays[index]}}">
+              <view class="single-icon-wrapper {{item == imageUrl ? 'selected-item': ''}}" bindtap="clickClock" data-item="{{item}}">
+                <image src="../../images/clock/{{item}}"></image>
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+
+      <scroll-view scroll-x="true" enable-flex="true">
+        <view class="weui-grids kind-list__item-hd">
+          <block wx:for="{{colors}}" wx:key="*this">
+            <view class="weui-grid">
+              <view class="single-color-wrapper {{item == backgroundColor ? 'selected-item': ''}}" style="background-color: {{item}}" bindtap="clickColor" data-item="{{item}}">
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+
+  </view>
+</view>

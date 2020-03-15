@@ -1,0 +1,8 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+　　<view class='content'>
+　　　　<view class="title">日程备忘录申请获取以下权限</view>
+　　　　<view class="description">获得你的公开信息(昵称，头像等)</view>
+　　</view>
+　　<button class='bottom' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type='primary' style="width: 70%;"> 授权登录</button>
+</view>

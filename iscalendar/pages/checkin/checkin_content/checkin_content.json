@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "calendar": "/components/calendar/index",
+    "clock": "/components/clock/clock"
+  },
+  "navigationBarTitleText": "打卡详情"
+}
